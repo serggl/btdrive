@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="60"
+        android:viewportHeight="60">
+    <group android:translateX="6"
+            android:translateY="6">
+        <path
+            android:fillType="evenOdd"
+            android:pathData="M15.41514,23.79176l1.95402,-1.95402l3.70531,3.70531l1.75129,-1.75129l-5.45661,-5.45661l1.38247,-1.38247l6.83908,6.83908l0.97644,-0.97758l-1.3819,-1.3819v-3.66868l3.21517,3.21517l0.89344,-0.89449l-6.06264,-6.06264h0.97701l18.79176,18.79176v8.1866c0,1.10457 -0.89543,2 -2,2l-9.8792,0l-13.75164,-13.75164l1.75129,-1.75129z"
+            android:strokeColor="#00000000"
+            android:strokeWidth="1">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="18.7653"
+                    android:startY="21.0927"
+                    android:endX="28.5885"
+                    android:endY="40.9159"
+                    android:type="linear">
+                    <item
+                        android:color="#44000000"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#00000000"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillType="nonZero"
+            android:pathData="M17.36917,25.74578l-1.95402,-1.95402l1.95402,-1.95402l1.95402,1.95402zM25.59071,23.79176l4.19138,4.19626l-5.57385,5.57385h-0.97701v-7.41063l-4.4796,4.4796l-1.38247,-1.38247l5.45661,-5.45661l-5.45661,-5.45661l1.38247,-1.38247l4.4796,4.4796v-7.41063h0.97701l5.57385,5.57385zM25.18525,21.43228l1.83678,-1.8319l-1.83678,-1.83678zM25.18525,26.14635v3.67356l1.83678,-1.8319zM33.00134,23.79176l-1.95402,1.95402l-1.95402,-1.95402l1.95402,-1.95402z"
+            android:strokeColor="#00000000"
+            android:strokeWidth="1" />
+    </group>
+</vector>

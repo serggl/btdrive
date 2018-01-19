@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Bluetooth в Автомобиле</string>
+
+    <string name="pref_enabled_title">Включать Bluetooth во время вождения</string>
+    <string name="pref_enabled_summary">Приложение определит что вы двигаетесь в автомобиле и включит Bluetooth для связи с вашей гарнитурой</string>
+
+    <string name="pref_doze_title">Фоновый режим</string>
+    <string name="pref_doze_summary">Позволит надежно определять движение в автомобиле даже если телефон в спящем режиме</string>
+
+    <string name="pref_debug_title">Отладка</string>
+    <string name="pref_debug_summary">Показывать текущую активность</string>
+
+    <string name="notification_channel">Оповещения</string>
+    <string name="notification_title_error">Ошибка</string>
+
+    <string name="notification_title_enabled">Мониторинг запущен</string>
+    <string name="notification_msg_enable_failed">Неудалось запустить мониторинг</string>
+    <string name="notification_msg_enabled">Bluetooth будет включен как только вы начнете вождение</string>
+
+    <string name="notification_title_disabled">Мониторинг остановлен</string>
+    <string name="notification_msg_disable_failed">Неудалось остановить мониторинг</string>
+    <string name="notification_msg_disabled">Не забудте активировать функцию в следующий раз</string>
+</resources>

@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enabled"
+        android:summary="@string/pref_enabled_summary"
+        android:title="@string/pref_enabled_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="doze_mode"
+        android:title="@string/pref_doze_title"
+        android:summary="@string/pref_doze_summary"/>
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="debug"
+        android:title="@string/pref_debug_title"
+        android:summary="@string/pref_debug_summary"/>
+
+</PreferenceScreen>

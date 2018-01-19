@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Bluetooth while Driving</string>
+
+    <string name="pref_enabled_title">Enable Bluetooth switching while driving</string>
+    <string name="pref_enabled_summary">App will detect your driving activity and turn on your Bluetooth for car kit connection</string>
+
+    <string name="pref_doze_title">Disable battery optimization</string>
+    <string name="pref_doze_summary">This will allow accurately detect driving activity even if your phone is in idle mode</string>
+
+    <string name="pref_debug_title">Debug</string>
+    <string name="pref_debug_summary">Notify currently running activity</string>
+
+    <string name="notification_channel">Notifications</string>
+    <string name="notification_title_error">Error</string>
+
+    <string name="notification_title_enabled">Activity monitoring enabled</string>
+    <string name="notification_msg_enable_failed">Failed to enable activity monitoring</string>
+    <string name="notification_msg_enabled">Your Bluetooth will be enabled once you start driving</string>
+
+    <string name="notification_title_disabled">Activity monitoring disabled</string>
+    <string name="notification_msg_disable_failed">Failed to disable activity monitoring</string>
+    <string name="notification_msg_disabled">Make sure you turn it on next time you drive</string>
+</resources>
