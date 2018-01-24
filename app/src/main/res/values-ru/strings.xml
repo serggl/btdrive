@@ -37,4 +37,16 @@
     <string name="notification_title_disabled">Мониторинг остановлен</string>
     <string name="notification_msg_disable_failed">Неудалось остановить мониторинг</string>
     <string name="notification_msg_disabled">Не забудте активировать функцию в следующий раз</string>
+
+    <string name="activity_confidence">Вероятность</string>
+    <string-array name="activity_kinds">
+        <item>В Автомобиле</item>
+        <item>На Велосипеде</item>
+        <item>На Ногах</item>
+        <item>Спокойствие</item>
+        <item>Неизвестно</item>
+        <item>Наклоны</item>
+        <item>Ходьба</item>
+        <item>Бег</item>
+    </string-array>
 </resources>

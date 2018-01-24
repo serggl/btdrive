@@ -37,4 +37,16 @@
     <string name="notification_title_disabled">Activity monitoring disabled</string>
     <string name="notification_msg_disable_failed">Failed to disable activity monitoring</string>
     <string name="notification_msg_disabled">Make sure you turn it on next time you drive</string>
+
+    <string name="activity_confidence">Confidence</string>
+    <string-array name="activity_kinds">
+        <item>In Vehicle</item>
+        <item>On Bicycle</item>
+        <item>On Foot</item>
+        <item>Still</item>
+        <item>Unknown</item>
+        <item>Tilting</item>
+        <item>Walking</item>
+        <item>Running</item>
+    </string-array>
 </resources>
