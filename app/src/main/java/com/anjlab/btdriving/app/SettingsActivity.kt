@@ -61,7 +61,7 @@ class SettingsActivity : AppCompatActivity() {
                     val recognition = Recognition(activity)
                     if (value as Boolean) {
                         Bluetooth().disable()
-                        recognition.start()
+                        recognition.start(true)
                     } else {
                         recognition.stop()
                     }

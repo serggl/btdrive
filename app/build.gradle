@@ -8,7 +8,7 @@ android {
         applicationId "com.anjlab.btdriving.app"
         minSdkVersion 23
         targetSdkVersion 27
-        versionCode 2
+        versionCode 1
         versionName "0.${versionCode}"
     }
     signingConfigs {

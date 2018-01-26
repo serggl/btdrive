@@ -24,7 +24,7 @@ class Recognition(private var context: Context) {
     private val client = ActivityRecognitionClient(context)
     private val pref = Preferences(context)
 
-    fun start() {
+    fun start(notify: Boolean) {
         pref.driving = false
         val task = client.requestActivityUpdates(
             DETECTION_INTERVAL_IN_MILLISECONDS,
@@ -32,12 +32,12 @@ class Recognition(private var context: Context) {
         )
 
         task.addOnSuccessListener({
-            notify( R.string.notification_title_enabled, R.string.notification_msg_enabled)
+            if (notify) notify(R.string.notification_title_enabled, R.string.notification_msg_enabled)
             pref.enabled = true
         })
 
         task.addOnFailureListener({
-            notify( R.string.notification_title_error, R.string.notification_msg_enable_failed)
+            if (notify) notify(R.string.notification_title_error, R.string.notification_msg_enable_failed)
             pref.enabled = false
         })
     }
