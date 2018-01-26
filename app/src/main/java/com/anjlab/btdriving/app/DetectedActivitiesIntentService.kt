@@ -36,19 +36,36 @@ class DetectedActivitiesIntentService : IntentService(TAG) {
                     3
                 )
             }
+            if (activity.confidence < 50) return
 
-            if (activity.confidence >= 70) {
-                if (activity.type == DetectedActivity.IN_VEHICLE) {
-                    if (!pref.driving) {
-                        pref.driving = true
-                        Bluetooth().enable()
+            if (activity.type == DetectedActivity.IN_VEHICLE && activity.confidence >= 70 && !pref.driving) {
+                pref.driving = true
+                pref.stillCounter = 0
+                Bluetooth().enable()
+            }
+            else if (pref.driving) {
+                var disable = false
+                when (activity.type) {
+                    DetectedActivity.ON_FOOT, DetectedActivity.RUNNING, DetectedActivity.WALKING -> {
+                        // walk out of a car and move
+                        disable = true
                     }
+                    DetectedActivity.STILL -> {
+                        if (activity.confidence > 90) {
+                            // ended driving, put phone on the table at least for 3 min
+                            val counter = pref.stillCounter
+                            if (counter >= 10) {
+                                disable = true
+                            } else {
+                                pref.stillCounter = counter + 1
+                            }
+                        }
+                    }
+                    else -> pref.stillCounter = 0
                 }
-                else if (pref.driving && activity.confidence > 50 && (
-                        activity.type == DetectedActivity.ON_FOOT ||
-                            activity.type == DetectedActivity.RUNNING ||
-                            activity.type == DetectedActivity.WALKING)) {
+                if (disable) {
                     pref.driving = false
+                    pref.stillCounter = 0
                     Bluetooth().disable()
                 }
             }

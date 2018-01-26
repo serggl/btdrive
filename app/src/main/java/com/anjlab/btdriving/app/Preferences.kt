@@ -32,6 +32,10 @@ class Preferences(private val context: Context) {
         get() = getBoolean(KEY_DEBUG)
         set(value) = setBoolean(KEY_DEBUG, value)
 
+    var stillCounter: Int
+        get() = getInt(KEY_STILL_COUNTER)
+        set(value) = setInt(KEY_STILL_COUNTER, value)
+
     private fun getBoolean(key: String): Boolean {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(key, false)
     }
@@ -39,6 +43,16 @@ class Preferences(private val context: Context) {
     private fun setBoolean(key: String, value: Boolean) {
         getPreferencesEditor()
             .putBoolean(key, value)
+            .apply()
+    }
+
+    private fun getInt(key: String): Int {
+        return PreferenceManager.getDefaultSharedPreferences(context).getInt(key, 0)
+    }
+
+    private fun setInt(key: String, value: Int) {
+        getPreferencesEditor()
+            .putInt(key, value)
             .apply()
     }
 
@@ -50,5 +64,6 @@ class Preferences(private val context: Context) {
         const val KEY_DEBUG = "debug"
         const val KEY_ENABLED = "enabled"
         const val KEY_DRIVING = "driving"
+        const val KEY_STILL_COUNTER = "still_counter"
     }
 }
