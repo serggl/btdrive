@@ -38,7 +38,8 @@ class DetectedActivitiesIntentService : IntentService(TAG) {
             }
             if (activity.confidence < 50) return
 
-            if (activity.type == DetectedActivity.IN_VEHICLE && activity.confidence >= 70 && !pref.driving) {
+            val onTheWheels = activity.type == DetectedActivity.IN_VEHICLE || activity.type == DetectedActivity.ON_BICYCLE
+            if (onTheWheels && !pref.driving) {
                 pref.driving = true
                 pref.stillCounter = 0
                 Bluetooth().enable()
